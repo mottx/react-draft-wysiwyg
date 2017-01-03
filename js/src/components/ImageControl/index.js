@@ -24,7 +24,7 @@ export default class ImageControl extends Component {
     showImageUpload: !!this.props.uploadCallback,
     showImageLoading: false,
     height: 'auto',
-    width: '100%',
+    width: '40%',
   };
 
   componentWillMount(): void {
@@ -236,7 +236,7 @@ export default class ImageControl extends Component {
                   htmlFor="file"
                   className="rdw-image-modal-upload-option-label"
                 >
-                  Drop the file or click to upload
+                  點擊此處或將圖片/影片檔案直接拖曳至此
                 </label>
               </div>
               <input
@@ -281,13 +281,13 @@ export default class ImageControl extends Component {
             onClick={this.addImageFromState}
             disabled={!imgSrc || !height || !width}
           >
-            Add
+            上傳
           </button>
           <button
             className="rdw-image-modal-btn"
             onClick={this.hideModal}
           >
-            Cancel
+            取消
           </button>
         </span>
         {showImageLoading ?
